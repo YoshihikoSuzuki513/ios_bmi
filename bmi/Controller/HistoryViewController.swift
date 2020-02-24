@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  HistoryViewController.swift
 //  bmi
 //
 //  Created by 鈴木義彦 on 2020/02/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class HistoryViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()

@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  InputViewController.swift
 //  bmi
 //
 //  Created by 鈴木義彦 on 2020/02/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class InputViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
