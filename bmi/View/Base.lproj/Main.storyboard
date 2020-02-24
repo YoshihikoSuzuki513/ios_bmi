@@ -146,6 +146,9 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveData:" destination="9pv-A4-QxB" eventType="touchUpInside" id="NRv-w3-AYP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKI-3U-OHa">
                                 <rect key="frame" x="20" y="733" width="165" height="50"/>
@@ -161,6 +164,9 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="deleteData:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ldc-7j-rjs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -229,7 +235,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="入力" image="input" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="bmiResultLabel" destination="foR-w9-JpB" id="Bnl-aJ-3DH"/>
                         <outlet property="heightTextField" destination="FAf-CO-alN" id="Bhu-BA-qbX"/>
+                        <outlet property="memoTextField" destination="nFZ-hc-4Jd" id="Fjr-Hg-AAM"/>
                         <outlet property="weightTextField" destination="siW-LE-ivn" id="54R-Gd-V0v"/>
                     </connections>
                 </viewController>

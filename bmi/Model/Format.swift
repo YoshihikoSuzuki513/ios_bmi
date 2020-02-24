@@ -19,4 +19,9 @@ class Format {
 		return result
 	}
 	
+	static func convertToMeters(from centimeters: Double) -> Double {
+		let result = centimeters / 100
+		return result
+	}
+	
 }

@@ -16,7 +16,8 @@ class Bmi {
 	}
 	
 	static func getBmi(height: Height, weight: Weight) -> Double {
-		return weight.value / pow(height.value, 2.0)
+		let result = weight.value / pow(Format.convertToMeters(from: height.value), 2.0)
+		return Format.oneDecimalPlace(value: String(result))
 	}
 	
 }
