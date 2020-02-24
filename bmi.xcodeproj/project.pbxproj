@@ -23,6 +23,7 @@
 		7EEBBED12403BC4800C5D8D6 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEBBED02403BC4800C5D8D6 /* Format.swift */; };
 		7EEBBED32403C59500C5D8D6 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEBBED22403C59500C5D8D6 /* Memo.swift */; };
 		7EEBBED52403D67400C5D8D6 /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEBBED42403D67400C5D8D6 /* DataMapper.swift */; };
+		7EEBBED72403E7D300C5D8D6 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEBBED62403E7D300C5D8D6 /* HistoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		7EEBBED02403BC4800C5D8D6 /* Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
 		7EEBBED22403C59500C5D8D6 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		7EEBBED42403D67400C5D8D6 /* DataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
+		7EEBBED62403E7D300C5D8D6 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		7EEBBEC324039BEA00C5D8D6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7EEBBED62403E7D300C5D8D6 /* HistoryTableViewCell.swift */,
 				7EB0E27624000D6B00E0A8E2 /* Main.storyboard */,
 			);
 			path = View;
@@ -129,8 +132,8 @@
 		7EEBBEC424039C2300C5D8D6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7EB0E27224000D6B00E0A8E2 /* InputViewController.swift */,
 				7EB0E27424000D6B00E0A8E2 /* HistoryViewController.swift */,
+				7EB0E27224000D6B00E0A8E2 /* InputViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -138,14 +141,14 @@
 		7EEBBEC524039C4200C5D8D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7EEBBEC624039CFB00C5D8D6 /* Height.swift */,
-				7EEBBEC824039EB600C5D8D6 /* Weight.swift */,
 				7EEBBECA24039F7600C5D8D6 /* Bmi.swift */,
+				7EEBBED42403D67400C5D8D6 /* DataMapper.swift */,
+				7EEBBED02403BC4800C5D8D6 /* Format.swift */,
+				7EEBBEC624039CFB00C5D8D6 /* Height.swift */,
+				7EEBBED22403C59500C5D8D6 /* Memo.swift */,
 				7EEBBECC2403A24B00C5D8D6 /* User.swift */,
 				7EEBBECE2403A90D00C5D8D6 /* Validation.swift */,
-				7EEBBED02403BC4800C5D8D6 /* Format.swift */,
-				7EEBBED22403C59500C5D8D6 /* Memo.swift */,
-				7EEBBED42403D67400C5D8D6 /* DataMapper.swift */,
+				7EEBBEC824039EB600C5D8D6 /* Weight.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			files = (
 				7EB0E27524000D6B00E0A8E2 /* HistoryViewController.swift in Sources */,
 				7EEBBEC724039CFB00C5D8D6 /* Height.swift in Sources */,
+				7EEBBED72403E7D300C5D8D6 /* HistoryTableViewCell.swift in Sources */,
 				7EEBBED12403BC4800C5D8D6 /* Format.swift in Sources */,
 				7EEBBECB24039F7600C5D8D6 /* Bmi.swift in Sources */,
 				7EB0E27324000D6B00E0A8E2 /* InputViewController.swift in Sources */,

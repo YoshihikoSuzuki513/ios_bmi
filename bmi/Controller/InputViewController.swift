@@ -17,13 +17,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
 	
 	var height: Height = Height.init(value: 0)
 	var weight: Weight = Weight.init(value: 0)
-	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		// Do any additional setup after loading the view.
-	}
-
-	
+		
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 		self.view.endEditing(true)
 	}
@@ -31,7 +25,6 @@ class InputViewController: UIViewController, UITextFieldDelegate {
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		if textField.tag == 0 {
 			weightTextField.becomeFirstResponder()
-			// TODO: 体重テキストにフォーカスする
 			return true
 		}
 		if textField.tag == 1 {

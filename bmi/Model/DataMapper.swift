@@ -17,6 +17,13 @@ class DataMapper {
 		return key
 	}
 	
+	static func getSaveDate() -> Array<Any> {
+		guard let saveKeys = UserDefaults.standard.array(forKey: "saveKeys") else {
+			return Array<String>()
+		}
+		return saveKeys
+	}
+	
 	static func getHistoryData() -> Array<Dictionary<String, Any>> {
 		guard let saveKeys = UserDefaults.standard.array(forKey: "saveKeys") else {
 			return Array<Dictionary<String, Any>>()
@@ -44,13 +51,32 @@ class DataMapper {
 			UserDefaults.standard.synchronize()
 			return
 		}
-		saveKeys.append(getDate())
+		if saveKeys.isEmpty {
+			let saveKeys = [getDate()]
+			UserDefaults.standard.set(saveKeys, forKey: "saveKeys")
+			UserDefaults.standard.synchronize()
+			return
+		}
+		for key in saveKeys {
+			if key == getDate() { continue }
+			saveKeys.append(getDate())
+		}
 		UserDefaults.standard.set(saveKeys, forKey: "saveKeys")
 		UserDefaults.standard.synchronize()
 	}
 
 	static func delete() {
 		UserDefaults.standard.removeObject(forKey: getDate())
+		guard let saveKeys: [String] = UserDefaults.standard.array(forKey: "saveKeys") as? [String] else {
+			return
+		}
+		var array = saveKeys
+		for(index, key) in saveKeys.enumerated() {
+			if key == getDate() {
+				array.remove(at: index)
+			}
+		}
+		UserDefaults.standard.set(array, forKey: "saveKeys")
 	}
 	
 }
