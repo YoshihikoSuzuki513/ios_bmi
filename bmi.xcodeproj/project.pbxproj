@@ -20,6 +20,7 @@
 		7EEBBECB24039F7600C5D8D6 /* Bmi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEBBECA24039F7600C5D8D6 /* Bmi.swift */; };
 		7EEBBECD2403A24B00C5D8D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEBBECC2403A24B00C5D8D6 /* User.swift */; };
 		7EEBBECF2403A90D00C5D8D6 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEBBECE2403A90D00C5D8D6 /* Validation.swift */; };
+		7EEBBED12403BC4800C5D8D6 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEBBED02403BC4800C5D8D6 /* Format.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		7EEBBECA24039F7600C5D8D6 /* Bmi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bmi.swift; sourceTree = "<group>"; };
 		7EEBBECC2403A24B00C5D8D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7EEBBECE2403A90D00C5D8D6 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		7EEBBED02403BC4800C5D8D6 /* Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				7EEBBECA24039F7600C5D8D6 /* Bmi.swift */,
 				7EEBBECC2403A24B00C5D8D6 /* User.swift */,
 				7EEBBECE2403A90D00C5D8D6 /* Validation.swift */,
+				7EEBBED02403BC4800C5D8D6 /* Format.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			files = (
 				7EB0E27524000D6B00E0A8E2 /* HistoryViewController.swift in Sources */,
 				7EEBBEC724039CFB00C5D8D6 /* Height.swift in Sources */,
+				7EEBBED12403BC4800C5D8D6 /* Format.swift in Sources */,
 				7EEBBECB24039F7600C5D8D6 /* Bmi.swift in Sources */,
 				7EB0E27324000D6B00E0A8E2 /* InputViewController.swift in Sources */,
 				7EEBBECF2403A90D00C5D8D6 /* Validation.swift in Sources */,
