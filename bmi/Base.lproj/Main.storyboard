@@ -17,12 +17,13 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McA-XB-4Qp">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <items>
                                     <navigationItem title="入力" id="EIV-z7-YlK"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="身長と体重を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16s-KT-FM7">
-                                <rect key="frame" x="50" y="118" width="285.5" height="24"/>
+                                <rect key="frame" x="50" y="118" width="314" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -51,12 +52,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="168" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FAf-CO-alN">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="168.5" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FAf-CO-alN">
                                 <rect key="frame" x="104" y="166" width="190" height="58"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="67" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="siW-LE-ivn">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="67.5" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="siW-LE-ivn">
                                 <rect key="frame" x="104" y="246" width="190" height="58"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -96,6 +97,7 @@
                             <constraint firstItem="FAf-CO-alN" firstAttribute="top" secondItem="16s-KT-FM7" secondAttribute="bottom" constant="24" id="alp-HW-IMj"/>
                             <constraint firstItem="siW-LE-ivn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xbv-6x-1EK" secondAttribute="trailing" constant="8" symbolic="YES" id="bIn-6l-g5G"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZWZ-Fv-e0t" secondAttribute="trailing" symbolic="YES" id="cpz-Kc-WRF"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="McA-XB-4Qp" secondAttribute="trailing" id="dTi-6G-3we"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="BbU-Nb-cTO" secondAttribute="trailing" constant="62" id="dqw-Et-4Lu"/>
                             <constraint firstItem="xbv-6x-1EK" firstAttribute="height" secondItem="z7Z-gw-RR4" secondAttribute="height" id="fCu-PO-0Qk"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="Yjd-1f-HIP" secondAttribute="trailing" constant="62" id="iaj-58-DZc"/>
@@ -105,7 +107,7 @@
                             <constraint firstItem="Yjd-1f-HIP" firstAttribute="top" secondItem="BbU-Nb-cTO" secondAttribute="bottom" constant="49" id="rbu-P4-1kI"/>
                             <constraint firstItem="siW-LE-ivn" firstAttribute="top" secondItem="FAf-CO-alN" secondAttribute="bottom" constant="22" id="uJK-wW-3v5"/>
                             <constraint firstItem="McA-XB-4Qp" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="wbD-Ag-Pej"/>
-                            <constraint firstItem="McA-XB-4Qp" firstAttribute="centerX" secondItem="16s-KT-FM7" secondAttribute="centerX" constant="14.25" id="x8L-mX-Jn0"/>
+                            <constraint firstItem="McA-XB-4Qp" firstAttribute="centerX" secondItem="16s-KT-FM7" secondAttribute="centerX" id="x8L-mX-Jn0"/>
                             <constraint firstItem="BbU-Nb-cTO" firstAttribute="top" secondItem="16s-KT-FM7" secondAttribute="bottom" constant="52" id="xMg-Mi-aud"/>
                             <constraint firstItem="Yjd-1f-HIP" firstAttribute="width" secondItem="BbU-Nb-cTO" secondAttribute="width" id="y5E-yI-dcs"/>
                             <constraint firstItem="FAf-CO-alN" firstAttribute="leading" secondItem="z7Z-gw-RR4" secondAttribute="trailing" constant="28" id="zPm-6x-6d6"/>
