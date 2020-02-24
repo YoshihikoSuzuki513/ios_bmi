@@ -54,7 +54,6 @@ class InputViewController: UIViewController, UITextFieldDelegate {
 		height = Height.init(value: Format.oneDecimalPlace(value: inputHeightValue))
 		weight = Weight.init(value: Format.oneDecimalPlace(value: inputWeightValue))
 		let bmi = Bmi.init(height: height, weight: weight)
-		// TODO: BMI値を表示する
 		bmiResultLabel.text = String(bmi.value)
 	}
 	

@@ -60,6 +60,4 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
 		return historyTableViewCell
 	}
 	
-
 }
-
