@@ -10,7 +10,13 @@ import Foundation
 
 class Validation {
 	
-	static func isOneDecimalPlace(inputValue: Double) -> Bool {
+	static func isSuccsess(inputValue: String) -> Bool {
+		if Double(inputValue) == nil {
+			return false
+		}
+		if inputValue.isEmpty {
+			return false
+		}
 		return true
 	}
 	
