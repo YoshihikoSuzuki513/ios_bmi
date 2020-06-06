@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Height {
+class Height {
 	let value: Double
 	
 	init(with value: Double) {

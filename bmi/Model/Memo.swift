@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Memo {
+class Memo {
 	let value: String
 	
 	init(with value: String?) {
