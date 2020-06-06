@@ -161,13 +161,13 @@
 			isa = PBXGroup;
 			children = (
 				7EEBBECA24039F7600C5D8D6 /* Bmi.swift */,
+				7ED0A866248BE01D0040FE09 /* Const.swift */,
 				7EEBBED42403D67400C5D8D6 /* DataMapper.swift */,
 				7EEBBED02403BC4800C5D8D6 /* Format.swift */,
 				7EEBBEC624039CFB00C5D8D6 /* Height.swift */,
 				7EEBBED22403C59500C5D8D6 /* Memo.swift */,
 				7EEBBECC2403A24B00C5D8D6 /* User.swift */,
 				7EEBBEC824039EB600C5D8D6 /* Weight.swift */,
-				7ED0A866248BE01D0040FE09 /* Const.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
