@@ -16,7 +16,7 @@ class Bmi {
 	}
 	
 	private static func calculate(height: Height, weight: Weight) -> Double {
-		let result = weight.value / pow(Format.convertToMeters(from: height.value), 2.0)
+		let result = weight.value / pow(Format.toMeters(from: height.value), 2.0)
 		return Format.toOneDecimalPlace(value: String(result))
 	}
 	
