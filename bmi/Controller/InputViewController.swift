@@ -44,12 +44,11 @@ class InputViewController: UIViewController, UITextFieldDelegate {
 
 	//MARK: UITextField
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-		//TODO: マジックナンバーを消したい
-		if textField.tag == 0 {
+		if textField.tag == Const.WEIGHT_TEXT_FIELD_TAG {
 			weightTextField.becomeFirstResponder()
 			return true
 		}
-		if textField.tag == 1 {
+		if textField.tag == Const.HEIGHT_TEXT_FIELD_TAG {
 			bmi((Any).self)
 			self.view.endEditing(true)
 			return true
