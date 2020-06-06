@@ -17,23 +17,8 @@ class InputViewController: UIViewController, UITextFieldDelegate {
 	
 	var height: Height = Height.init(with: 0)
 	var weight: Weight = Weight.init(with: 0)
-		
-	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-		self.view.endEditing(true)
-	}
-
-	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-		if textField.tag == 0 {
-			weightTextField.becomeFirstResponder()
-			return true
-		}
-		if textField.tag == 1 {
-			bmi((Any).self)
-			return true
-		}
-		return true
-	}
-		
+	
+	//MARK: IBAction
 	@IBAction func bmi(_ sender: Any) {
 		validationInputData()
 		let bmi = Bmi.init(height: height, weight: weight)
@@ -49,15 +34,35 @@ class InputViewController: UIViewController, UITextFieldDelegate {
 		let bmi = Bmi.init(height: height, weight: weight)
 		let memo = Memo.init(with: memoTextField.text)
 		let user = User.init(height: height, weight: weight, bmi: bmi, memo: memo)
-		DataMapper.save(user: user)
+		DataMapper.save(user)
 	}
 	
+	//MARK: UIResponder
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		self.view.endEditing(true)
+	}
+
+	//MARK: UITextField
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		//TODO: マジックナンバーを消したい
+		if textField.tag == 0 {
+			weightTextField.becomeFirstResponder()
+			return true
+		}
+		if textField.tag == 1 {
+			bmi((Any).self)
+			return true
+		}
+		return true
+	}
+	
+	//MARK: プライベートメソッド
 	private func validationInputData() {
 		do {
 			height = try Height.init(with: heightTextField.text)
 			weight = try Weight.init(with: weightTextField.text)
 		} catch {
-			AlertViewController.showAlertController(viewController: self)
+			AlertController.showAlertController(viewController: self)
 			return
 		}
 	}

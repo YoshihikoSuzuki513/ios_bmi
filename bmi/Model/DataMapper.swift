@@ -30,7 +30,7 @@ class DataMapper {
 		return result
 	}
  
-	static func save(user: User) {
+	static func save(_ user: User) {
 		let userDic: Dictionary<String, Any> = [
 			"height": user.height.value,
 			"weight": user.weight.value,
