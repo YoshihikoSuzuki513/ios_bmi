@@ -9,14 +9,7 @@
 import Foundation
 
 class DataMapper {
-	
-	static func getDate() -> String {
-		let dateFormatter = DateFormatter()
-		dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyyMMdd", options: 0, locale: Locale(identifier: "ja_JP"))
-		let key = dateFormatter.string(from: Date())
-		return key
-	}
-	
+		
 	static func getSaveDate() -> Array<Any> {
 		guard let saveKeys = UserDefaults.standard.array(forKey: "saveKeys") else {
 			return Array<String>()
@@ -77,6 +70,13 @@ class DataMapper {
 			}
 		}
 		UserDefaults.standard.set(array, forKey: "saveKeys")
+	}
+	
+	private static func getDate() -> String {
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyyMMdd", options: 0, locale: Locale(identifier: "ja_JP"))
+		let key = dateFormatter.string(from: Date())
+		return key
 	}
 	
 }

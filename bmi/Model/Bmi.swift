@@ -12,10 +12,10 @@ class Bmi {
 	let value: Double
 	
 	init(height: Height, weight: Weight) {
-		self.value = Bmi.getBmi(height: height, weight: weight)
+		self.value = Bmi.calculate(height: height, weight: weight)
 	}
 	
-	static func getBmi(height: Height, weight: Weight) -> Double {
+	private static func calculate(height: Height, weight: Weight) -> Double {
 		let result = weight.value / pow(Format.convertToMeters(from: height.value), 2.0)
 		return Format.oneDecimalPlace(value: String(result))
 	}

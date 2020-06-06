@@ -15,8 +15,8 @@ class InputViewController: UIViewController, UITextFieldDelegate {
 	@IBOutlet weak var memoTextField: UITextField!
 	@IBOutlet weak var bmiResultLabel: UILabel!
 	
-	var height: Height = Height.init(value: 0)
-	var weight: Weight = Weight.init(value: 0)
+	var height: Height = Height.init(with: 0)
+	var weight: Weight = Weight.init(with: 0)
 		
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 		self.view.endEditing(true)
@@ -35,24 +35,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
 	}
 		
 	@IBAction func bmi(_ sender: Any) {
-		guard let inputHeightValue = heightTextField.text else {
-			showAlertController()
-			return
-		}
-		guard let inputWeightValue = weightTextField.text else {
-			showAlertController()
-			return
-		}
-		if !Validation.isSuccsess(inputValue: inputHeightValue) {
-			showAlertController()
-			return
-		}
-		if !Validation.isSuccsess(inputValue: inputWeightValue) {
-			showAlertController()
-			return
-		}
-		height = Height.init(value: Format.oneDecimalPlace(value: inputHeightValue))
-		weight = Weight.init(value: Format.oneDecimalPlace(value: inputWeightValue))
+		validationInputData()
 		let bmi = Bmi.init(height: height, weight: weight)
 		bmiResultLabel.text = String(bmi.value)
 	}
@@ -62,39 +45,21 @@ class InputViewController: UIViewController, UITextFieldDelegate {
 	}
 	
 	@IBAction func saveData(_ sender: Any) {
-		guard let inputHeightValue = heightTextField.text else {
-			showAlertController()
-			return
-		}
-		guard let inputWeightValue = weightTextField.text else {
-			showAlertController()
-			return
-		}
-		if !Validation.isSuccsess(inputValue: inputHeightValue) {
-			showAlertController()
-			return
-		}
-		if !Validation.isSuccsess(inputValue: inputWeightValue) {
-			showAlertController()
-			return
-		}
-		height = Height.init(value: Format.oneDecimalPlace(value: inputHeightValue))
-		weight = Weight.init(value: Format.oneDecimalPlace(value: inputWeightValue))
+		validationInputData()
 		let bmi = Bmi.init(height: height, weight: weight)
-		var memo = Memo.init(value: "")
-		if let inputMemoValue = memoTextField.text {
-			memo = Memo.init(value: inputMemoValue)
-		} else {
-			memo = Memo.init(value: "")
-		}
+		let memo = Memo.init(with: memoTextField.text)
 		let user = User.init(height: height, weight: weight, bmi: bmi, memo: memo)
 		DataMapper.save(user: user)
 	}
 	
-	private func showAlertController() {
-		let alertController = UIAlertController(title: "入力エラー", message: "入力項目に誤りがあります。\n入力し直してください。", preferredStyle: .alert)
-		alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-		self.present(alertController, animated: true, completion: nil)
+	private func validationInputData() {
+		do {
+			height = try Height.init(with: heightTextField.text)
+			weight = try Weight.init(with: weightTextField.text)
+		} catch {
+			AlertViewController.showAlertController(viewController: self)
+			return
+		}
 	}
 	
 }

@@ -8,10 +8,17 @@
 
 import Foundation
 
-class Height {
+struct Height {
 	let value: Double
 	
-	init(value: Double) {
+	init(with value: Double) {
+		self.value = value
+	}
+	
+	init(with value: String?) throws {
+		guard let inputHeight = value, let value = Double(inputHeight) else {
+			throw NSError(domain: "身長には数字を入力して下さい", code: -1, userInfo: nil)
+		}
 		self.value = value
 	}
 	

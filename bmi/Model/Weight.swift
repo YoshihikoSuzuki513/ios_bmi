@@ -8,10 +8,17 @@
 
 import Foundation
 
-class Weight {
+struct Weight {
 	let value: Double
 	
-	init(value: Double) {
+	init(with value: Double) {
+		self.value = value
+	}
+	
+	init(with value: String?) throws {
+		guard let inputValue = value, let value = Double(inputValue) else {
+			throw NSError(domain: "体重には数字を入力して下さい", code: -1, userInfo: nil)
+		}
 		self.value = value
 	}
 	

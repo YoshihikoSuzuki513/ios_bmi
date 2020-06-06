@@ -8,10 +8,14 @@
 
 import Foundation
 
-class Memo {
+struct Memo {
 	let value: String
 	
-	init(value: String) {
+	init(with value: String?) {
+		guard let value = value else {
+			self.value = ""
+			return
+		}
 		self.value = value
 	}
 	
