@@ -20,7 +20,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
 	
 	//MARK: IBAction
 	@IBAction func bmi(_ sender: Any) {
-		validationInputData()
+		validatteInputData()
 		let bmi = Bmi.init(height: height, weight: weight)
 		bmiResultLabel.text = String(bmi.value)
 	}
@@ -30,7 +30,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
 	}
 	
 	@IBAction func saveData(_ sender: Any) {
-		validationInputData()
+		validatteInputData()
 		let bmi = Bmi.init(height: height, weight: weight)
 		let memo = Memo.init(with: memoTextField.text)
 		let user = User.init(height: height, weight: weight, bmi: bmi, memo: memo)
@@ -57,7 +57,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
 	}
 	
 	//MARK: プライベートメソッド
-	private func validationInputData() {
+	private func validatteInputData() {
 		do {
 			height = try Height.init(with: heightTextField.text)
 			weight = try Weight.init(with: weightTextField.text)
