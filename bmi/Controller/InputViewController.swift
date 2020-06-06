@@ -51,6 +51,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
 		}
 		if textField.tag == 1 {
 			bmi((Any).self)
+			self.view.endEditing(true)
 			return true
 		}
 		return true
