@@ -10,7 +10,7 @@ import Foundation
 
 class Format {
 	
-	static func oneDecimalPlace(value: String) -> Double {
+	static func toOneDecimalPlace(value: String) -> Double {
 		guard let doubleValue = Double(value) else {
 			return Double(0)
 		}
