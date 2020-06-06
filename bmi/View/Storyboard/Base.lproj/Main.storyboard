@@ -264,7 +264,7 @@
                                 <rect key="frame" x="20" y="98" width="374" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" rowHeight="136" id="gVf-xJ-Xa1" customClass="HistoryTableViewCell" customModule="bmi" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="historyCell" rowHeight="136" id="gVf-xJ-Xa1" customClass="HistoryTableViewCell" customModule="bmi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gVf-xJ-Xa1" id="LQh-oh-FVX">
