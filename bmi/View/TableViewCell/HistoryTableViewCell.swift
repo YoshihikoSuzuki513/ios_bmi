@@ -27,9 +27,8 @@ class HistoryTableViewCell: UITableViewCell {
     }
 		
 	func setData(saveDateList: Array<Any>, histories: Array<Dictionary<String, Any>>, indexPath: IndexPath) {
-		//TODO: 日にちだけ表示する
-		if let day = saveDateList[indexPath.row] as? String {
-			self.dayLabel.text = day
+		if let savedDate = saveDateList[indexPath.row] as? String {
+			self.dayLabel.text = convertDay(savedDate: savedDate) + "日"
 		}
 		if let height = histories[indexPath.row]["height"] as? Double {
 			self.heightLabel.text = "身長：" + String(height) + " cm"
@@ -43,6 +42,15 @@ class HistoryTableViewCell: UITableViewCell {
 		if let memo = histories[indexPath.row]["memo"] as? String {
 			self.memoLabel.text = memo
 		}
+	}
+	
+	private func convertDay(savedDate: String) -> String {
+		let formatter = DateFormatter()
+		formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyy/MM/dd", options: 0, locale: Locale(identifier: "ja_JP"))
+		guard let date = formatter.date(from: savedDate) else { return "" }
+		formatter.dateFormat = "dd"
+		let day = formatter.string(from: date)
+		return day
 	}
 
 }
